@@ -12,6 +12,9 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Abp" Version="7.2.1" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\MyProjectImpulso.Core\MyProjectImpulso.Core.csproj" />
   </ItemGroup>
 </Project>

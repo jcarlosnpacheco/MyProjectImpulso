@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyProjectImpulso.EntityFrameworkCore;
 
@@ -11,9 +12,10 @@ using MyProjectImpulso.EntityFrameworkCore;
 namespace MyProjectImpulso.Migrations
 {
     [DbContext(typeof(MyProjectImpulsoDbContext))]
-    partial class MyProjectImpulsoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220603192043_Added_Candidates")]
+    partial class Added_Candidates
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
