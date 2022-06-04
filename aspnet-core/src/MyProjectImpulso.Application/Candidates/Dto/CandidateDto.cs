@@ -3,9 +3,15 @@ using Abp.AutoMapper;
 
 namespace MyProjectImpulso.Candidates.Dto
 {
-    [AutoMapTo(typeof(Candidate))]
+    /// <summary>
+    /// Candidate DTO with Auto Mapper and extends
+    /// </summary>
+    [AutoMapFrom(typeof(Candidate))]
     public class CandidateDto : FullAuditedEntityDto<int>
     {
+        /// <summary>
+        /// Name of Candidate DTO
+        /// </summary>
         public string Name { get; set; }
     }
 }
