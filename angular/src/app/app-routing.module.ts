@@ -1,3 +1,4 @@
+import { CandidatesComponent } from './candidates/candidates/candidates.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -21,7 +22,8 @@ import { ChangePasswordComponent } from './users/change-password/change-password
                     { path: 'roles', component: RolesComponent, data: { permission: 'Pages.Roles' }, canActivate: [AppRouteGuard] },
                     { path: 'tenants', component: TenantsComponent, data: { permission: 'Pages.Tenants' }, canActivate: [AppRouteGuard] },
                     { path: 'about', component: AboutComponent, canActivate: [AppRouteGuard] },
-                    { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] }
+                    { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] },
+                    { path: 'candidates', component: CandidatesComponent, canActivate: [AppRouteGuard] }
                 ]
             }
         ])
