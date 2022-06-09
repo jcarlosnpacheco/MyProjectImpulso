@@ -4729,7 +4729,8 @@ export class CandidateDtoPagedResultDto implements ICandidateDtoPagedResultDto {
     if (_data) {
       if (Array.isArray(_data["items"])) {
         this.items = [] as any;
-        for (let item of _data["items"]) this.items.push(CandidateDto.fromJS(item));
+        for (let item of _data["items"])
+          this.items.push(CandidateDto.fromJS(item));
       }
       this.totalCount = _data["totalCount"];
     }
@@ -4896,6 +4897,13 @@ export class CandidateServiceProxy {
   protected jsonParseReviver: ((key: string, value: any) => any) | undefined =
     undefined;
 
+  constructor(
+    @Inject(HttpClient) http: HttpClient,
+    @Optional() @Inject(API_BASE_URL) baseUrl?: string
+  ) {
+    this.http = http;
+    this.baseUrl = baseUrl !== undefined && baseUrl !== null ? baseUrl : "";
+  }
   getAll(
     skipCount: number | undefined,
     maxResultCount: number | undefined
